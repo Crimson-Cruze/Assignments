@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+double calculateTax(double salary) {
+    if (salary >= 0 && salary <= 150000) {
+        if (salary <= 14999.99) {
+            return salary * 0.15;
+        } else if (salary <= 29999.99) {
+            return 2250 + (salary - 15000) * 0.18;
+        } else if (salary <= 49999.99) {
+            return 5400 + (salary - 30000) * 0.22;
+        } else if (salary <= 79999.99) {
+            return 11000 + (salary - 50000) * 0.27;
+        } else {
+            return 21600 + (salary - 80000) * 0.33;
+        }
+    } else {
+        return -1.0;
+    }
+}
+
+int main() {
+    double salary;
+
+    printf("Enter the salary amount: ");
+    scanf("%lf", &salary);
+
+    double taxDue = calculateTax(salary);
+
+    if (taxDue == -1.0) {
+        printf("Salary is outside the table range.\n");
+    } else {
+        printf("Tax due: %.2lf\n", taxDue);
+    }
+
+    return 0;
+}

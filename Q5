@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main()
+{
+	int f1,f2,nft,n;
+	
+	printf("Enter Fibonacci Sequence number: ");
+	scanf("%d",&n);
+	
+	f1=0;
+	f2=1;
+	
+	for(int i=0; i<n; i++)
+	{
+		printf("%d",nft);
+		f1=f2;
+		f2=nft;
+		nft=f1+f2;
+	}
+	return 0;
+}

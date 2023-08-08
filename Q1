@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    double miles, kilometers;
+    const double milesToKm = 1.609;
+
+    printf("Enter distance in miles: ");
+    scanf("%lf", &miles);
+
+    kilometers = miles * milesToKm;
+
+    printf("%.2lf miles is equal to %.2lf kilometers\n", miles, kilometers);
+
+    return 0;
+}

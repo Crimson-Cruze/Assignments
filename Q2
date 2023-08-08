@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int num, positiveCount = 0, negativeCount = 0, zeroCount = 0;
+
+    printf("Enter a sequence of numbers (enter 0 to stop):\n");
+
+    while (1) {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+
+        if (num == 0) {
+            break; // Exit the loop if 0 is entered
+        } else if (num > 0) {
+            positiveCount++;
+        } else {
+            negativeCount++;
+        }
+    }
+
+    printf("Number of positive numbers: %d\n", positiveCount);
+    printf("Number of negative numbers: %d\n", negativeCount);
+    printf("Number of zeros: %d\n", zeroCount);
+
+    return 0;
+}

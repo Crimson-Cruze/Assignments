@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int tableX, tableY, start, end;
+
+    printf("Enter the starting table (X): ");
+    scanf("%d", &tableX);
+
+    printf("Enter the ending table (Y): ");
+    scanf("%d", &tableY);
+
+    if (tableX <= tableY) {
+        start = tableX;
+        end = tableY;
+    } else {
+        start = tableY;
+        end = tableX;
+    }
+
+    printf("Multiplication Tables from Table %d to Table %d:\n", start, end);
+
+    for (int i = start; i <= end; ++i) {
+        printf("Table of %d:\n", i);
+        for (int j = 1; j <= 10; ++j) {
+            printf("%d x %d = %d\n", i, j, i * j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
